@@ -16,11 +16,11 @@ Taxable Income is:  13110.0
 Tax is:  2622.0
   
 #Question 3
-Enter your SID: 21105115
-Enter your Name: Kalash
+Enter your SID: 21105
+Enter your Name: xyz
 Enter your Gender(Male: M, Female: F, Unknown: U): M
 Enter your Course Name: ECE
-Enter your CGPA: 8.0
+Enter your CGPA: 5.0
 [21105115, 'Kalash', 'M', 'ECE', 8.0]
 
 #Question 4

@@ -46,16 +46,16 @@ Question 6
 Enter sid: 21105115
 Enter name: Kalash
 Do you want to enter more data (Use "Y" or "N"): Y
-Enter sid: 116
-Enter name: Abhay
+Enter sid: 102
+Enter name: abc
 Do you want to enter more data (Use "Y" or "N"): Y
 Enter sid: 101
 Enter name: xyz
 Do you want to enter more data (Use "Y" or "N"): N
 Data has been added
-The data entered is  {21105115: 'Kalash', 21105116: 'Abhay', 101: 'xyz'}
-Dictionary sorted by name  [(116, 'Abhay'), (21105115, 'Kalash'), (101, 'xyz')]
-Dictionary sorted by sid  [(101, 'xyz'), (116, 'Abhay'), (21105115, 'Kalash')]
+The data entered is  {21105115: 'Kalash', 102: 'abc', 101: 'xyz'}
+Dictionary sorted by name  [(102, 'abc'), (21105115, 'Kalash'), (101, 'xyz')]
+Dictionary sorted by sid  [(101, 'xyz'), (102, 'abc'), (21105115, 'Kalash')]
 Enter the SID: 101
 The name of the student is  xyz
 

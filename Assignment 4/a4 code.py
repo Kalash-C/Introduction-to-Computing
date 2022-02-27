@@ -1,34 +1,13 @@
 #question1
-class Towers:
-    def __init__(self, disks=3):
-        self.disks = disks
-        self.towers = [[]]*3
-        self.towers[0] = [i for i in range(self.disks, 0, -1)]
-        self.towers[1] = []
-        self.towers[2] = []
-    def __str__(self):
-        output = ""
-        for i in range(self.disks, -1, -1):
-            for j in range(3):
-                if len(self.towers[j]) > i:
-                    output += " " + str(self.towers[j][i])
-                else:
-                    output += "  "
-            output += "\n"
-        return output + "-------"
-    def move(self, from_tower, dest_tower):
-        disk = self.towers[from_tower].pop()
-        self.towers[dest_tower].append(disk)
-def solve_tower_of_hanoi(towers, n, start_tower, dest_tower, aux_tower):
-    if n == 0:
+def Towers_Of_Hanoi(numdisks, frm_disc, to_disc, aux_disc):
+    if numdisks == 1:
+        print("Move disk [1] from rod [",frm_disc, "] to rod {", to_disc, '}')
         return
-    solve_tower_of_hanoi(towers, n - 1, start_tower, aux_tower, dest_tower)
-    towers.move(start_tower, dest_tower)
-    print(towers)
-    solve_tower_of_hanoi(towers, n - 1, aux_tower, dest_tower, start_tower)
-t = Towers()
-print(t)
-solve_tower_of_hanoi(t, len(t.towers), 0, 2, 1)
+    Towers_Of_Hanoi(numdisks-1, frm_disc, aux_disc, to_disc)
+    print("Move disk ["+str(numdisks) + "] from rod [",str(frm_disc)+" ] to rod {", to_disc, '}')
+    Towers_Of_Hanoi(numdisks-1, aux_disc, to_disc, frm_disc)
+numdisks = 4
+Towers_Of_Hanoi(numdisks, 'A', 'C', 'B')
 
 
 #question2
@@ -101,10 +80,11 @@ print('max value is',mval,'hash val of max val is',hash)
 class Student:
     def __init__(self,name,rnumber):
         self.name = name
-        self.roll_number=rnumber
+        self.rnumber=rnumber
     def __del__(self):
         print('Object destroyed')
 s1=Student('abc',11)
+print('Name of student is',s1.name,'and roll number is',s1.rnumber)
 del s1
 
 
@@ -116,6 +96,8 @@ class Employee:
 e1=Employee('Mehak',40000)
 e2=Employee('Ashok',50000)
 e3=Employee('Viren',60000)
+dict={'Name':{e1.name,e2.name,e3.name},'Salary':{e1.salary,e2.salary,e3.salary}}
+print(dict)
 
 #part a
 e1.salary=70000
@@ -123,3 +105,19 @@ print(e1.__dict__)
 
 #part b
 del e3
+
+
+#question 6
+word1=input('Enter a word: ')
+word2=input('Enter a meaningful word from letters of 1st word: ')
+set1=set(word1)
+set2=set(word2)
+set3=set1 & set2
+len1=len(set1)
+len2=len(set2)
+len3=len(set3)
+if len3 !=len1 or len3 != len2:
+    print('Friendship is fake')
+else:
+    print('Friendship is real')
+
